@@ -1,0 +1,249 @@
+{
+    "Sayfa1": [
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "717ai",
+            "TICKER": "$WIRE",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x8ffd336d457ada04a2d5112f8f0c1f1a84577f2f",
+            "IMAGE NAME": "717ai.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "aixbt",
+            "TICKER": "$AIXBT",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xf1fdc83c3a336bdbdc9fb06e318b08eaddc82ff4",
+            "IMAGE NAME": "aixbt.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Altcoinist",
+            "TICKER": "$ALTT",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xd753bcad56de9c3b5c303e68e916307eb2eb6c00",
+            "IMAGE NAME": "altcoinist.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Acolyt",
+            "TICKER": "$ACOLYT",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xfb2be279dcafe6b5364e4c49a0a39aedf9c38ac7",
+            "IMAGE NAME": "acolyt.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "ArAIstotle",
+            "TICKER": "$FACY",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xd87ea5f46615e1175c909610766e853faa5f94be",
+            "IMAGE NAME": "araistotle.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "ARBUS",
+            "TICKER": "$ARBUS",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x0de3ce0c23ceb3108cab1472153fa5e2eb674f46",
+            "IMAGE NAME": "arbus.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Axelrod",
+            "TICKER": "$AXR",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x6d5df1d155d79279abd65a98815f7853c2b3a005",
+            "IMAGE NAME": "axelrod.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Luna",
+            "TICKER": "$LUNA",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa8e64fb120ce8796594670bae72279c8aa1e5359",
+            "IMAGE NAME": "luna.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Backroom",
+            "TICKER": "$ROOM",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xb4c4e80abe1c807b8f30ac72c9420dd6acece8d5",
+            "IMAGE NAME": "backroom.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "BasisOS",
+            "TICKER": "$BIOS",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xc98223367ddcd80ca3f7368362fa3cec20b3264d",
+            "IMAGE NAME": "basisos.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Director Lucien",
+            "TICKER": "$LUCIEN",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xc237a591e4142d93771f0020a147f73952d50737",
+            "IMAGE NAME": "director-lucien.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Ethy AI",
+            "TICKER": "$ETHY",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x47006dcfc5aa14b577d3d2a0e39f72046bf4c054",
+            "IMAGE NAME": "ethy-ai.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "G.A.M.E",
+            "TICKER": "$GAME",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xd418dfe7670c21f682e041f34250c114db5d7789",
+            "IMAGE NAME": "game.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Loky",
+            "TICKER": "$LOKY",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xcd6efb9c75c79449f5a0d689c5528154d162762e",
+            "IMAGE NAME": "loky.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Mamo",
+            "TICKER": "$MAMO",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x4a021ba3ab1f0121e7df76f345c547db86cb3468",
+            "IMAGE NAME": "mamo.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "mfercoin",
+            "TICKER": "$MFER",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xb08a99ab559e5456907278727a3b0d968c0a313b",
+            "IMAGE NAME": "mfercoin.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "MUTE SWAP",
+            "TICKER": "$MUTE",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x6ee050f3da4cb50be42129d43d3ffe66c0ecba54",
+            "IMAGE NAME": "mute-swap.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Neurobro",
+            "TICKER": "$BRO",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x932a65f4e1f12c969f0e0636097e094d69a89ac3",
+            "IMAGE NAME": "neurobro.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Predi",
+            "TICKER": "$PREDI",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xe10604ad5bfca65f17a25747133a40ee3ea608a7",
+            "IMAGE NAME": "predi.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Ribbita",
+            "TICKER": "$TIBBIR",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x0c3b466104545efa096b8f944c1e524e1d0d4888",
+            "IMAGE NAME": "ribbita.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "RoboStack",
+            "TICKER": "$ROBOT",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa2ebbcf1d9e291c0b9f46660f5fc2b3d25550330",
+            "IMAGE NAME": "robostack.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "SAM",
+            "TICKER": "$SAM",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xd72a82022134ba0d417c8d733139057e9bb9ea3f",
+            "IMAGE NAME": "sam.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Samur AI",
+            "TICKER": "$SAMUR",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x7866f790202fe997fe36560813887541605bdac3",
+            "IMAGE NAME": "samur-ai.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "S.A.N.T.A",
+            "TICKER": "$SANTA",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xc5d0305435b1389edae6babd9260b1a5c19f1606",
+            "IMAGE NAME": "santa.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Shekel Agentic Capital",
+            "TICKER": "$SHEKEL",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xded72b40970af70720adbc5127092f3152392273",
+            "IMAGE NAME": "shekel.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Solace",
+            "TICKER": "$SOLACE",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x912567c105a172777e56411dd0aa4acc10e628a9",
+            "IMAGE NAME": "solace.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Sympson",
+            "TICKER": "$SYMP",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xf22482a194b7df297599a8d05c418c4f36cbe560",
+            "IMAGE NAME": "sympson.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "The SWARM",
+            "TICKER": "$SWARM",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xd420ed70750fc9e0046e3b719f3e665a50941f6e",
+            "IMAGE NAME": "the-swarm.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "$TRUST ME BROs",
+            "TICKER": "$TRUST",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xd8c97c1202a2dd1a0174a8f35dbccb403ccbb3f3",
+            "IMAGE NAME": "trust-me-bros.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Vader",
+            "TICKER": "$VADER",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa1dddb82501e8fe2d92ad0e8ba331313f501de72",
+            "IMAGE NAME": "vader.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "VIRGEN",
+            "TICKER": "$VIRGEN",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x6bae74b0c3d94b279e04a370cd238d1ae67d2f78",
+            "IMAGE NAME": "virgen.png"
+        },
+        {
+            "TYPE": "Sentient",
+            "CARD NAME / TOKEN NAME": "Voice of the Gods",
+            "TICKER": "$ADM",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x039f7c7e22c1c3bba5e871029ca72d5ddead295b",
+            "IMAGE NAME": "voice-of-the-gods.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Vpay",
+            "TICKER": "$VPAY",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xdeb75b16307e4c3ddb6f6731c303e15cc16a8e82",
+            "IMAGE NAME": "vpay.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "WachAI",
+            "TICKER": "$WACH",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xeaded6365e815609c53c1dab5c035bc783b51f85",
+            "IMAGE NAME": "wachxbt.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "WhaleIntel",
+            "TICKER": "$WINT",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa563eaab67a3178acd1d47a34f38370e4c4911c4",
+            "IMAGE NAME": "whaleintel.png"
+        }
+    ]
+}
