@@ -263,70 +263,70 @@
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "Small Thing",
                        "TICKER":  "$ST",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x01e15e0b744b6d875c5081ae92f620f8223d6800",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x01e15e0b744b6d875c5081ae92f620f8223d6800",
                        "IMAGE NAME":  "small-thing.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "AIxBET",
                        "TICKER":  "$AXB",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x3b3b3dcff8669297bef410cddcea4c362074135a",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x3b3b3dcff8669297bef410cddcea4c362074135a",
                        "IMAGE NAME":  "aixbet.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "Jeff CEO",
                        "TICKER":  "$CEO",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x376875233c50f3f62eb1e052f0d7acdbbdb36a9d",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x376875233c50f3f62eb1e052f0d7acdbbdb36a9d",
                        "IMAGE NAME":  "jeff-ceo.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "Lurky",
                        "TICKER":  "$LURKY",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0xae0b10dffe76e1f741a72f7632627537d16b8fb1",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0xae0b10dffe76e1f741a72f7632627537d16b8fb1",
                        "IMAGE NAME":  "lurky.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "Otto AI",
                        "TICKER":  "$OTTO",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x1df58424e3ae0421d5faf70e9d7cb84d7b017ec5",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x1df58424e3ae0421d5faf70e9d7cb84d7b017ec5",
                        "IMAGE NAME":  "otto-ai.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "Provenance Fact-check",
                        "TICKER":  "$PROV",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x7ca022d200d10686db3bb6754ee371e466f34211",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x7ca022d200d10686db3bb6754ee371e466f34211",
                        "IMAGE NAME":  "prov.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "AMAI",
                        "TICKER":  "$AMAI",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0xa4775d37ff995bfa541bd7a0387221538ca7c920",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0xa4775d37ff995bfa541bd7a0387221538ca7c920",
                        "IMAGE NAME":  "amai.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "PRXVT",
                        "TICKER":  "$PRXVT",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0xacad49114f03e0d24bd79abf206ac9523d726fde",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0xacad49114f03e0d24bd79abf206ac9523d726fde",
                        "IMAGE NAME":  "prxvt.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "ReplyCorp",
                        "TICKER":  "$REPLY",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x68b34fd640ee48e93b9d81eaf4cbd4e489d5d17f",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x68b34fd640ee48e93b9d81eaf4cbd4e489d5d17f",
                        "IMAGE NAME":  "replycorp.png"
                    },
                    {
                        "TYPE":  "Unicorn",
                        "CARD NAME / TOKEN NAME":  "ButlerLiquid",
                        "TICKER":  "$BL",
-                       "GECKO TERMINNAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x780eeb55c05c9611987f839f5fb6c67b0312d2e5",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x780eeb55c05c9611987f839f5fb6c67b0312d2e5",
                        "IMAGE NAME":  "butlerliquid.png"
                    }
                ]
