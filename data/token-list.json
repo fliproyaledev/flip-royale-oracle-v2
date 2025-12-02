@@ -4,7 +4,7 @@
                        "IMAGE NAME":  "virtual.png",
                        "TICKER":  "$VIRTUAL",
                        "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x0b3e328455c4059eeb9e3743215830db5a980191",
-                       "TYPE":  "Genesis",
+                       "TYPE":  "Firstborn",
                        "CARD NAME / TOKEN NAME":  "Virtual Protocol"
                    },
                    {
