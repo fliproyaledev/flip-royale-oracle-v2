@@ -1,6 +1,13 @@
 ﻿{
     "Sayfa1":  [
                    {
+                       "IMAGE NAME":  "virtual.png",
+                       "TICKER":  "$VIRTUAL",
+                       "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x0b3e328455c4059eeb9e3743215830db5a980191",
+                       "TYPE":  "Genesis",
+                       "CARD NAME / TOKEN NAME":  "Virtual Protocol"
+                   },
+                   {
                        "TYPE":  "Sentient",
                        "CARD NAME / TOKEN NAME":  "717ai",
                        "TICKER":  "$WIRE",
