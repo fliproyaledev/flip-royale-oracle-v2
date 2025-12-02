@@ -7,15 +7,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
         // Redis'teki önbelleği çek
-        const cachedPrices = await kv.get('GLOBAL_PRICE_CACHE');
+    const cachedPrices = await kv.get('GLOBAL_PRICE_CACHE');
 
-        if (!cachedPrices) {
-            // Önbellek boşsa boş dizi dön (Fallback çalışsın)
-            return res.status(200).json([]);
+    if (!cachedPrices) {
+        return res.status(200).json({ ok: true, prices: [] });
+    }
+
+    // Bazı durumlarda cachedPrices KV içinde string olarak kaydedilmiş olabilir.
+    // Hem string hem array durumlarını normalize ederek array döndürüyoruz.
+    try {
+        if (typeof cachedPrices === 'string') {
+            const parsed = JSON.parse(cachedPrices);
+            if (Array.isArray(parsed)) return res.status(200).json({ ok: true, prices: parsed });
+            // parsed değilse (eski format) fallback
+            return res.status(200).json({ ok: true, prices: [] });
         }
 
-        // Redis verisi zaten string/json formatındadır
-        return res.status(200).json(cachedPrices);
+        if (Array.isArray(cachedPrices)) {
+            return res.status(200).json({ ok: true, prices: cachedPrices });
+        }
+
+        // Farklı tip gelirse boş dön
+        return res.status(200).json({ ok: true, prices: [] });
+    } catch (err) {
+        console.error('[Oracle] Failed to parse GLOBAL_PRICE_CACHE:', err);
+       return res.status(200).json({ ok: true, prices: [] });
+    }        
 
     } catch (error: any) {
         console.error('[Oracle] Get Prices Error:', error);
