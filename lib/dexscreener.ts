@@ -19,7 +19,7 @@ export type DexscreenerQuote = {
 
 const CACHE_TTL_MS = 45_000
 const NULL_CACHE_TTL_MS = 60_000
-const CHUNK_SIZE = 30
+const CHUNK_SIZE = 10 // Reduced from 30 to avoid bulk failures
 const FLUSH_DELAY_MS = 25
 const MAX_RETRY = 3
 
@@ -31,12 +31,270 @@ const EXTERNAL_HEADERS: Record<string, string> = {
   'user-agent': 'Mozilla/5.0 (compatible; FlipBot/1.0; +https://flipflop.local)'
 }
 
-// ... lines 34-288 remain same ...
+type CacheEntry = {
+  expiresAt: number
+  value: DexscreenerQuote | null
+}
 
-for (let i = 0; i < pairs.length; i += CHUNK_SIZE) {
-  const chunk = pairs.slice(i, i + CHUNK_SIZE)
-  await fetchChunk(net, chunk, resolvers)
-  await delay(100) // 100ms delay between chunks to be nicer to API
+type NetworkQueue = {
+  pairs: Set<string>
+  resolvers: Map<string, Array<{ resolve: Function; reject: Function }>>
+  timer?: NodeJS.Timeout
+}
+
+type SearchCacheEntry = {
+  expiresAt: number
+  value: DexscreenerPairRef | null
+}
+
+const globalAny = globalThis as any
+
+const pairCache: Map<string, CacheEntry> =
+  globalAny.__flipDexCache ?? (globalAny.__flipDexCache = new Map())
+
+const networkQueues: Map<string, NetworkQueue> =
+  globalAny.__flipDexQueues ?? (globalAny.__flipDexQueues = new Map())
+
+const searchCache: Map<string, SearchCacheEntry> =
+  globalAny.__flipDexSearch ?? (globalAny.__flipDexSearch = new Map())
+
+let searchChain: Promise<unknown> = Promise.resolve()
+let lastSearchAt = 0
+
+// -----------------------------------------------------
+// Utils
+// -----------------------------------------------------
+
+function toKey(network: string, pair: string): string {
+  return `${network.toLowerCase()}:${pair.toLowerCase()}`
+}
+
+function delay(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function isHexAddressLower(s: string): boolean {
+  return /^0x[0-9a-f]{40}$/.test(s)
+}
+
+// -----------------------------------------------------
+// Public API
+// -----------------------------------------------------
+
+export async function getDexPairQuote(network: string, pair: string) {
+  if (!network || !pair) return null
+
+  const key = toKey(network, pair)
+  const now = Date.now()
+  const cached = pairCache.get(key)
+
+  if (cached && cached.expiresAt > now) return cached.value
+
+  return enqueue(network, pair)
+}
+
+export async function getDexPairQuoteStrict(network: string, pair: string) {
+  if (!network || !pair) return null
+
+  const net = network.toLowerCase()
+  const pr = pair.toLowerCase()
+  const key = toKey(net, pr)
+  const now = Date.now()
+  const cached = pairCache.get(key)
+
+  if (cached && cached.expiresAt > now) return cached.value
+
+  const quote = await fetchSinglePair(net, pr)
+
+  pairCache.set(key, {
+    value: quote,
+    expiresAt: now + (quote ? CACHE_TTL_MS : NULL_CACHE_TTL_MS)
+  })
+
+  return quote
+}
+
+// Main function: find best pair for token
+export async function findDexPairForToken(
+  token: Token
+): Promise<DexscreenerPairRef | null> {
+  if (!token?.symbol && !token?.name) return null
+
+  const preferNetwork = (token.dexscreenerNetwork || 'base').toLowerCase()
+
+  const key = `${token.id || token.symbol}::${preferNetwork}`
+  const now = Date.now()
+  const cached = searchCache.get(key)
+
+  if (cached && cached.expiresAt > now) {
+    return cached.value
+  }
+
+  const queries = Array.from(new Set([token.symbol, token.name].filter(Boolean)))
+
+  let result: DexscreenerPairRef | null = null
+
+  const job = async () => {
+    for (const q of queries) {
+      const found = await runSearch(q, token, preferNetwork)
+      if (found) {
+        result = normalizeRef(found)
+        break
+      }
+    }
+    searchCache.set(key, {
+      value: result,
+      expiresAt: now + SEARCH_CACHE_TTL_MS
+    })
+    return result
+  }
+
+  const chained = searchChain.then(job, job)
+  searchChain = chained.then(() => undefined).catch(() => undefined)
+  return chained
+}
+
+function normalizeRef(ref: DexscreenerPairRef | null | undefined) {
+  if (!ref?.network || !ref?.pair) return null
+  return {
+    network: ref.network.toLowerCase(),
+    pair: ref.pair.toLowerCase()
+  }
+}
+
+// -----------------------------------------------------
+// Search System
+// -----------------------------------------------------
+
+async function runSearch(
+  query: string,
+  token: Token,
+  requiredNetwork: string
+): Promise<DexscreenerPairRef | null> {
+  const trimmed = query.trim()
+  if (!trimmed) return null
+
+  const wait = Math.max(
+    0,
+    SEARCH_MIN_INTERVAL_MS - (Date.now() - lastSearchAt)
+  )
+  if (wait > 0) await delay(wait)
+  lastSearchAt = Date.now()
+
+  const url = `https://api.dexscreener.com/latest/dex/search?q=${encodeURIComponent(
+    trimmed
+  )}`
+
+  try {
+    const res = await fetch(url, { headers: EXTERNAL_HEADERS })
+    if (!res.ok) return null
+
+    const json = await res.json()
+    const pairs = Array.isArray(json?.pairs) ? json.pairs : []
+    if (!pairs.length) return null
+
+    const matches = pairs.filter(
+      (p: any) => String(p?.chainId).toLowerCase() === requiredNetwork
+    )
+
+    if (!matches.length) return null
+
+    const scored = scoreAndSort(matches, token.symbol)
+
+    const pick = scored[0]?.record ?? matches[0]
+
+    const network = String(pick.chainId || '').trim().toLowerCase()
+    const pair = String(pick.pairAddress || '').trim().toLowerCase()
+
+    if (!network || !pair) return null
+
+    return { network, pair }
+  } catch {
+    return null
+  }
+}
+
+function scoreAndSort(records: any[], target: string) {
+  return records
+    .map((p) => ({
+      record: p,
+      score: scoreRecord(p, target)
+    }))
+    .filter((p) => p.score > 0)
+    .sort((a, b) => b.score - a.score)
+}
+
+function scoreRecord(r: any, target: string) {
+  let score = 0
+
+  const symbol = String(r?.baseToken?.symbol || '').toUpperCase()
+  const liquidity = Number(r?.liquidity?.usd || 0)
+
+  if (liquidity > 0) score += Math.log10(liquidity + 10)
+
+  if (symbol === target) score += 50
+  else if (symbol.includes(target)) score += 5
+
+  const age = Number(r?.pairCreatedAt || 0)
+  score += age / 1e9
+
+  return score
+}
+
+// -----------------------------------------------------
+// Queue + Chunk System (rate-limit protection)
+// -----------------------------------------------------
+
+function enqueue(network: string, pair: string): Promise<DexscreenerQuote | null> {
+  const q = getQueue(network)
+  const pr = pair.toLowerCase()
+
+  return new Promise((resolve, reject) => {
+    const list = q.resolvers.get(pr) || []
+    list.push({ resolve, reject })
+    q.resolvers.set(pr, list)
+    q.pairs.add(pr)
+
+    if (!q.timer) {
+      q.timer = setTimeout(() => flushQueue(network), FLUSH_DELAY_MS)
+    }
+  })
+}
+
+function getQueue(network: string): NetworkQueue {
+  const net = network.toLowerCase()
+  let q = networkQueues.get(net)
+
+  if (!q) {
+    q = { pairs: new Set(), resolvers: new Map() }
+    networkQueues.set(net, q)
+  }
+
+  return q
+}
+
+async function flushQueue(network: string) {
+  const net = network.toLowerCase()
+  const q = networkQueues.get(net)
+  if (!q) return
+
+  q.timer = undefined
+
+  const pairs = Array.from(q.pairs)
+  q.pairs.clear()
+
+  const resolvers = q.resolvers
+  q.resolvers = new Map()
+
+  // Chunk requests to avoid URL length limits and apply rate limiting
+  for (let i = 0; i < pairs.length; i += CHUNK_SIZE) {
+    const chunk = pairs.slice(i, i + CHUNK_SIZE)
+    await fetchChunk(net, chunk, resolvers)
+    // Delay to be nicer to API and avoid 429s
+    if (i + CHUNK_SIZE < pairs.length) {
+      await delay(100)
+    }
+  }
 }
 
 // -----------------------------------------------------
@@ -117,6 +375,20 @@ async function fetchChunk(
       }
 
       for (const tokenAddr of unresolved) {
+        // If it looks like a pair address, try fetching it directly as a single pair first
+        if (isHexAddressLower(tokenAddr)) {
+          const directQuote = await fetchSinglePair(network, tokenAddr)
+          if (directQuote) {
+            const realKey = toKey(network, tokenAddr)
+            pairCache.set(realKey, {
+              value: directQuote,
+              expiresAt: Date.now() + CACHE_TTL_MS
+            })
+            resolvePair(network, tokenAddr, directQuote, resolvers)
+            continue
+          }
+        }
+
         if (!isHexAddressLower(tokenAddr)) {
           resolvePair(network, tokenAddr, null, resolvers)
           continue
