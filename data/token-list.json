@@ -314,6 +314,13 @@
                        "TICKER":  "$BL",
                        "GECKO TERMINAL POOL LINK":  "https://api.dexscreener.io/latest/dex/pairs/base/0x780eeb55c05c9611987f839f5fb6c67b0312d2e5",
                        "IMAGE NAME":  "butlerliquid.png"
-                   }
+                   },        
+                   {
+                       "TYPE": "Pegasus",
+                       "CARD NAME / TOKEN NAME": "Wasabot",
+                       "TICKER": "$BOT",
+                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x28e97e5d5040c0fec97e85c587c0ae829ca504ff",
+                       "IMAGE NAME": "wasabot.png"
+                  }
                ]
 }
