@@ -328,6 +328,20 @@
                        "TICKER": "$FLIP",
                        "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa8132a6d2fd8e973f97dad2cbc7702daa5f0af9e",
                        "IMAGE NAME": "flip-royale.png"
+                  },
+                   {
+                       "TYPE": "Unicorn",
+                       "CARD NAME / TOKEN NAME": "MORSE",
+                       "TICKER": "$MORSE",
+                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xb8490db9a26fea722a4bcd2c2900b5f3ac978676",
+                       "IMAGE NAME": "morse.png"
+                  }
+                   {
+                       "TYPE": "Unicorn",
+                       "CARD NAME / TOKEN NAME": "REPPO",
+                       "TICKER": "$REPPO",
+                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x70000c1cb3ee34a7323211607ac3162665b49549",
+                       "IMAGE NAME": "reppo.png"
                   }        
                ]
 }
