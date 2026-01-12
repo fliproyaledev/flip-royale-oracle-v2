@@ -335,7 +335,7 @@
                        "TICKER": "$MORSE",
                        "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xb8490db9a26fea722a4bcd2c2900b5f3ac978676",
                        "IMAGE NAME": "morse.png"
-                  }
+                  },
                    {
                        "TYPE": "Unicorn",
                        "CARD NAME / TOKEN NAME": "REPPO",
