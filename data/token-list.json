@@ -321,6 +321,13 @@
                        "TICKER": "$BOT",
                        "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x28e97e5d5040c0fec97e85c587c0ae829ca504ff",
                        "IMAGE NAME": "wasabot.png"
-                  }
+                  },
+                   {
+                       "TYPE": "Unicorn",
+                       "CARD NAME / TOKEN NAME": "Flip Royale",
+                       "TICKER": "$FLIP",
+                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa8132a6d2fd8e973f97dad2cbc7702daa5f0af9e",
+                       "IMAGE NAME": "flip-royale.png"
+                  }        
                ]
 }
