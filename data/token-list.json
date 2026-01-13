@@ -342,6 +342,13 @@
                        "TICKER": "$REPPO",
                        "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x70000c1cb3ee34a7323211607ac3162665b49549",
                        "IMAGE NAME": "reppo.png"
+                  },
+                   {
+                       "TYPE": "Unicorn",
+                       "CARD NAME / TOKEN NAME": "Dealer Node",
+                       "TICKER": "$DNODE",
+                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xdc22ece7221293d8e3834ddd02d970a414791d17",
+                       "IMAGE NAME": "dealer-node.png"
                   }        
                ]
 }
