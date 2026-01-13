@@ -329,26 +329,27 @@
                        "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa8132a6d2fd8e973f97dad2cbc7702daa5f0af9e",
                        "IMAGE NAME": "flip-royale.png"
                   },
-                   {
-                       "TYPE": "Unicorn",
-                       "CARD NAME / TOKEN NAME": "MORSE",
-                       "TICKER": "$MORSE",
-                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xb8490db9a26fea722a4bcd2c2900b5f3ac978676",
-                       "IMAGE NAME": "morse.png"
-                  },
-                   {
-                       "TYPE": "Unicorn",
-                       "CARD NAME / TOKEN NAME": "REPPO",
-                       "TICKER": "$REPPO",
-                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x70000c1cb3ee34a7323211607ac3162665b49549",
-                       "IMAGE NAME": "reppo.png"
-                  },
-                   {
-                       "TYPE": "Unicorn",
-                       "CARD NAME / TOKEN NAME": "Dealer Node",
-                       "TICKER": "$DNODE",
-                       "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xdc22ece7221293d8e3834ddd02d970a414791d17",
-                       "IMAGE NAME": "dealer-node.png"
-                  }        
+        {
+            "TYPE": "Unicorn",
+            "CARD NAME / TOKEN NAME": "Neox",
+            "TICKER": "$NEOX",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x8463c010ea5d74cbce56d25e5fcd5280b71c2472",
+            "IMAGE NAME": "neox.png"
+        },
+        {
+            "TYPE": "Unicorn",
+            "CARD NAME / TOKEN NAME": "Zoof Wallet",
+            "TICKER": "$ZOOF",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x64d93c1ebb10aad6ec440bbdb8fb08dab1b54361",
+            "IMAGE NAME": "zoof-wallet.png"
+        },
+
+        {
+            "TYPE": "Unicorn",
+            "CARD NAME / TOKEN NAME": "CAESAR",
+            "TICKER": "$CAESAR",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x4f2017fe50c00752f6efe2a5b00df46e269ac53d",
+            "IMAGE NAME": "caesar.png"
+        }         
                ]
 }
