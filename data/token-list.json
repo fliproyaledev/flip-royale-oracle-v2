@@ -350,6 +350,27 @@
             "TICKER": "$CAESAR",
             "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x4f2017fe50c00752f6efe2a5b00df46e269ac53d",
             "IMAGE NAME": "caesar.png"
-        }         
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "YUNAI",
+            "TICKER": "$YUNAI",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x50ae405573fb6cf40c1977917bfc1db265082d3e",
+            "IMAGE NAME": "yunai.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Tycoon By Shareland",
+            "TICKER": "$TYCOON",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa8b23be2e5feceaeb87273a9b7b5f0ffcbba22da",
+            "IMAGE NAME": "tycoon-by-shareland.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "GLORIA",
+            "TICKER": "$GLORIA",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x929401b2f3e9ad2c84eeee0a9f34486c53310d4c",
+            "IMAGE NAME": "gloria.png"
+        }          
                ]
 }
