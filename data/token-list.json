@@ -371,6 +371,12 @@
             "TICKER": "$GLORIA",
             "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x929401b2f3e9ad2c84eeee0a9f34486c53310d4c",
             "IMAGE NAME": "gloria.png"
-        }          
+        },
+        {
+            "TYPE": "Unicorn",
+            "CARD NAME / TOKEN NAME": "Starly the Star Guide",
+            "TICKER": "$STAR",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x8905bba0c5762f9b25008d42fd2b84fd8fde779d",
+            "IMAGE NAME": "starly-the-star-guide.png"        
                ]
 }
