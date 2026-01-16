@@ -391,6 +391,27 @@
             "TICKER": "$STAR",
             "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x8905bba0c5762f9b25008d42fd2b84fd8fde779d",
             "IMAGE NAME": "starly-the-star-guide.png"   
-            }
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Oracle of Preferences ZK",
+            "TICKER": "$OOPZ",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0x4bde3ca2603ba4d3345f92ee70fea5ba6dab6a67",
+            "IMAGE NAME": "oracle-of-preferences-zk.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Cybercentry",
+            "TICKER": "$CENTRY",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xbccfb65960f9648f4dad7be579590050dfee385f",
+            "IMAGE NAME": "cybercentry.png"
+        },
+        {
+            "TYPE": "Genesis",
+            "CARD NAME / TOKEN NAME": "Robostack",
+            "TICKER": "$ROBOT",
+            "GECKO TERMINAL POOL LINK": "https://api.dexscreener.io/latest/dex/pairs/base/0xa2ebbcf1d9e291c0b9f46660f5fc2b3d25550330",
+            "IMAGE NAME": "robostack.png"
+        }        
                ]
 }
