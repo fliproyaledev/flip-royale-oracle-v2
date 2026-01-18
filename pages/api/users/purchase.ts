@@ -36,7 +36,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         const qty = Number(count) || 1;
         // Varsayılan olarak common, eğer rare ise rare
-        const validatedPackType = packType === 'rare' ? 'rare' : 'common';
+        const VALID_PACK_TYPES = ['common', 'rare', 'unicorn', 'genesis', 'sentient'];
+        const validatedPackType = VALID_PACK_TYPES.includes(packType) ? packType : 'common';
         const packKey = `${validatedPackType}_pack`; // 'common_pack' veya 'rare_pack'
 
         // 2. Ödeme İşlemleri (Puan Düşme vb.) - BURASI AYNI KALSIN
